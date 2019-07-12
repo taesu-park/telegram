@@ -45,6 +45,8 @@ def telegram():
             best = response.get('faces')[0].get('celebrity')
             if best.get('confidence') > 0.2:
                 text = f"{best.get('confidence')*100}%만큼 {best.get('value')}를 닮으셨네요"
+            else:
+                text = "연예인을 닮지 않았네요..."
         else:
             text = '사람 아닌듯..'
                     # 마지막! url 만들어서 메시지 보내기
